@@ -5,10 +5,12 @@ const FoodList = ({foods, onFoodClick}) => {
 
     const foodsItems = foods.map((food, index) => {
       return <FoodListItem food={food} key={index} onFoodClick={onFoodClick}> {food}</FoodListItem>
+      
     })
 
   return (
     <div>
+    Nothing Here
     <ul>
       {foodsItems}
     </ul>
