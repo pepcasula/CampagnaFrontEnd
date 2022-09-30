@@ -8,12 +8,12 @@ const FoodSelector = ({foods, onFoodSelected}) => {
     }
     
     const foodOptions = foods.map((food, index) => {
-      return <option value={index} key={index}>{food.name}</option>
+        return <option value={index} key={index}>{food.name}</option>
     })
 
     return (
-        <select defaultValue="" onChange={handleChange}>
-            <option value="" selected>Choose a Product</option>
+        <select onChange={handleChange}>
+            <option value="" defaultValue>Choose a Product</option>
             {foodOptions}
         </select>
     )

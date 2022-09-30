@@ -12,8 +12,8 @@ const BAndBSelector = ({bAndBs, onBAndBSelected}) => {
     })
 
     return (
-        <select defaultValue="" onChange={handleChange}>
-            <option value="" selected>Choose a Product</option>
+        <select onChange={handleChange}>
+            <option value="" defaultValue>Choose a Product</option>
             {bAndBOptions}
         </select>
     )
