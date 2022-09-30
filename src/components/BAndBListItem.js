@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './BAndBListItem.css';
 import styled from "styled-components";
+
 
 const ListItem = styled.li`
   background-color: paleturquoise;
@@ -19,7 +21,7 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
 
 
   return <ListItem onClick={handleClick}>
-                                <h4>{bAndB.name}</h4>
+                                <Link to="/accomodations/detail"><h4>{bAndB.name}</h4></Link>
                                 Email: {bAndB.email}<br/>
                                 Phone number: {bAndB.phoneNumber}
          </ListItem>

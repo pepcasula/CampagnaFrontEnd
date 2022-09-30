@@ -1,6 +1,7 @@
 import React from 'react';
 import './FoodListItem.css';
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const ListItem = styled.li`
   background-color: beige;
@@ -17,13 +18,13 @@ const FoodListItem = ({food, onFoodClick}) => {
     onFoodClick(food);
   }
 
-  return <ListItem onClick={handleClick}>
+  return <li onClick={handleClick}>
                                     <h4>{food.name}</h4>
                                     <p>{food.description}</p>
                                     Content per unit: {food.sizePerUnit}{}<br/>
                                     Price: {food.price}<br/>
                                     {food.farmer.name}
-         </ListItem>
+         </li>
 }
 
 export default FoodListItem;

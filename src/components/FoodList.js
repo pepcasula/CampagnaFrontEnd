@@ -10,7 +10,7 @@ const FoodList = ({foods, onFoodClick}) => {
 
   return (
     <div>
-    Nothing Here
+    Our foods:
     <ul>
       {foodsItems}
     </ul>

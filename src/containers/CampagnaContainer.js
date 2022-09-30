@@ -52,6 +52,7 @@ const CampagnaContainer = () => {
                 <Route path="/" element={< Home />} />
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} />} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
+                <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
                 <Route path="/events" element={< Events />} />
               </Routes>
           </Router>
