@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-const BookingForm = ({createBooking, bandbid}) => {
+const BookingForm = ({createBooking, bandbId}) => {
 
     const [startDate, setStartDate] = useState("")
     const [endDate, setEndDate] = useState("")
@@ -13,8 +13,9 @@ const BookingForm = ({createBooking, bandbid}) => {
 
     const handleSubmit = (evt) => {
         evt.preventDefault()
+        console.log(bandbId);
         const booking = {
-            bandb : { id : bandbid },
+            bandb : { id : bandbId },
             startDate,
             endDate,
             numberOfGuests

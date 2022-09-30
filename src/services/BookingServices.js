@@ -1,6 +1,6 @@
 const baseURL = 'http://localhost:8080/bookings'
 
-const bookingService = {
+const bookingServices = {
 
     postBooking(payload){
         return fetch(baseURL, {
@@ -12,4 +12,4 @@ const bookingService = {
     }
 }
 
-export default bookingService
+export default bookingServices

@@ -1,6 +1,7 @@
 import React from 'react';
 import BookingForm from './BookingForm';
-import bookingService from './../services/BookingServices'
+import bookingService from './../services/BookingServices';
+
 
 const BAndBDetail = ({selectedBAndB}) => {
 
