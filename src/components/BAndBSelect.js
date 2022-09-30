@@ -8,7 +8,7 @@ const BAndBSelector = ({bAndBs, onBAndBSelected}) => {
     }
     
     const bAndBOptions = bAndBs.map((bAndB, index) => {
-      return <option value={index} key={index}>{bAndB.name}</option>
+        return <option value={index} key={index}>{bAndB.name}</option>
     })
 
     return (

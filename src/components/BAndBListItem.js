@@ -3,6 +3,8 @@ import './BAndBListItem.css';
 
 const BAndBListItem = ({bAndB, onBAndBClick}) => {
 
+
+
   const handleClick = function(){
     onBAndBClick(bAndB);
   }

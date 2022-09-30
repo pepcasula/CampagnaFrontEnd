@@ -5,6 +5,7 @@ import FoodDetail from '../components/FoodDetail';
 import BAndBDetail from '../components/BAndBDetail';
 import FoodSelector from '../components/FoodSelect';
 import BAndBSelector from '../components/BAndBSelect';
+
 import './CampagnaContainer.css';
 
 const CampagnaContainer = () => {
@@ -58,7 +59,7 @@ const CampagnaContainer = () => {
 
             <BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />
             <BAndBSelector bAndBs={bAndBs} onBAndBSelected={onBAndBSelected} />
-            {selectedBAndB ? <BAndBDetail selectedBAndB={selectedBAndB} /> : null}
+            {selectedBAndB ? <BAndBDetail selectedBAndB={selectedBAndB}/> : null}
 
         </div>
     )
