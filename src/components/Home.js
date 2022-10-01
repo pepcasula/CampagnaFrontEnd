@@ -1,9 +1,9 @@
 import React from "react";
 
 const Events = () => (
-  <div>
+  <div className='sub-routes'>
     <h4>Homepage</h4>
-    <p>Nothing here for now</p>
+    <p>Nothing here for now, explanation about the app, what you can do and how</p>
   </div>
 );
 

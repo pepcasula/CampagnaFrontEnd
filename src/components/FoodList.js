@@ -9,7 +9,7 @@ const FoodList = ({foods, onFoodClick}) => {
     })
 
   return (
-    <div>
+    <div className='sub-routes'>
     Our foods:
     <ul>
       {foodsItems}
