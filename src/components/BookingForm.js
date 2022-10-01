@@ -29,7 +29,7 @@ const BookingForm = ({createBooking, bandbId}) => {
     return (<>
     <form onSubmit={handleSubmit}>
         <input type='date' id="startDate" value={startDate} onChange={handleStartDate} required/>
-        <input type='date' id="endDate" value={endDate} onChange={handleEndDate}  required/>
+        <input type='date' id="endDate" value={endDate} defaultValue={startDate} onChange={handleEndDate}  required/>
         <input type='number' id="numberOfGuests" value={numberOfGuests} onChange={handleNumberOfGuests} required/>
         <input type="submit" name="submit" value="Send request to host" />
     </form>

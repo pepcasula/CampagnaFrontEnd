@@ -20,6 +20,7 @@ const CampagnaContainer = () => {
     const [selectedFood, setSelectedFood] = useState(null);
     const [bAndBs, setBAndBs] = useState([]);
     const [selectedBAndB, setSelectedBAndB] = useState(null);
+    const [basket, setBasket] = useState([])
 
     useEffect(() => {
       getFoods();
@@ -40,6 +41,12 @@ const CampagnaContainer = () => {
       .then(res => res.json())
       .then(bAndBs => setBAndBs(bAndBs))
     }
+
+    const addTpBasket = (evt) => {
+      evt.preventDefault()
+      const newBasket = [...basket, evt.target.value]
+      setBasket(newBasket)
+    }
     
     const onFoodClick = function(food) {
         setSelectedFood(food);
@@ -49,13 +56,18 @@ const CampagnaContainer = () => {
       setSelectedBAndB(bAndB);
   }
 
+  const showBasket = basket.map((element, index) => {
+    console.log(element.food);
+  })
+
     return (
         <div className="main-container">
+          <p>{showBasket}</p>
           <Router>
             <NavBar />
               <Routes>
                 <Route path="/" element={< Home />} />
-                <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} />} />
+                <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} addToBasket={addTpBasket}/>} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
                 <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
                 <Route path="/events" element={< Events />} />

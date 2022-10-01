@@ -25,7 +25,7 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
   return <ListItem onClick={handleClick}>
                                 <Link to="/accomodations/detail"><h4>{bAndB.name}</h4></Link>
                                 Email: {bAndB.email}<br/>
-                                Phone number: {bAndB.phoneNumber}
+                                Phone number: {/*{bAndB.phoneNumber}*/}
          </ListItem>
 }
 

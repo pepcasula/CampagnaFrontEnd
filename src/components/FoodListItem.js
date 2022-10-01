@@ -12,7 +12,7 @@ const ListItem = styled.li`
   border: 1px black;
 `
 
-const FoodListItem = ({food, onFoodClick}) => {
+const FoodListItem = ({food, onFoodClick, addToBasket}) => {
 
   const handleClick = function(){
     onFoodClick(food);
@@ -21,10 +21,11 @@ const FoodListItem = ({food, onFoodClick}) => {
   return <ListItem onClick={handleClick}>
                                     <h4>{food.name}</h4>
                                     <p>{food.description}</p>
-                                    Content per unit: {food.sizePerUnit}{}<br/>
+                                    Content per unit: {food.sizePerUnit}{food.measurementUnit}<br/>
                                     Price: {food.price}<br/>
                                     {food.farmer.name}
-         </ListItem>
+                                    <button onClick={addToBasket} value={food}>+</button>
+        </ListItem>
 }
 
 export default FoodListItem;
