@@ -12,10 +12,15 @@ const ListItem = styled.li`
   border: 1px black;
 `
 
-const FoodListItem = ({food, onFoodClick, addToBasket}) => {
+const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
 
   const handleClick = function(){
     onFoodClick(food);
+  }
+
+  const addToBasket = () => {
+    const newBasket = [...basket, food]
+    onBasketAdd(newBasket)
   }
 
   return <ListItem onClick={handleClick}>
@@ -24,7 +29,7 @@ const FoodListItem = ({food, onFoodClick, addToBasket}) => {
                                     Content per unit: {food.sizePerUnit}{food.measurementUnit}<br/>
                                     Price: {food.price}<br/>
                                     {food.farmer.name}
-                                    <button onClick={addToBasket} value={food}>+</button>
+                                    <button onClick={addToBasket} value={food.name}>+</button>
         </ListItem>
 }
 

@@ -1,10 +1,10 @@
 import React from 'react';
 import FoodListItem from './FoodListItem';
 
-const FoodList = ({foods, onFoodClick, addToBasket}) => {
+const FoodList = ({foods, onFoodClick, onBasketAdd, basket}) => {
 
     const foodsItems = foods.map((food, index) => {
-      return <FoodListItem food={food} key={index} onFoodClick={onFoodClick} addToBasket={addToBasket}> {food}</FoodListItem>
+      return <FoodListItem food={food} key={index} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}> {food}</FoodListItem>
       
     })
 

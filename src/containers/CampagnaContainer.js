@@ -42,10 +42,8 @@ const CampagnaContainer = () => {
       .then(bAndBs => setBAndBs(bAndBs))
     }
 
-    const addTpBasket = (evt) => {
-      evt.preventDefault()
-      const newBasket = [...basket, evt.target.value]
-      setBasket(newBasket)
+    const onBasketAdd = function(newList){
+      setBasket(newList)
     }
     
     const onFoodClick = function(food) {
@@ -57,7 +55,7 @@ const CampagnaContainer = () => {
   }
 
   const showBasket = basket.map((element, index) => {
-    console.log(element.food);
+    console.log(element);
   })
 
     return (
@@ -67,7 +65,7 @@ const CampagnaContainer = () => {
             <NavBar />
               <Routes>
                 <Route path="/" element={< Home />} />
-                <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} addToBasket={addTpBasket}/>} />
+                <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}/>} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
                 <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
                 <Route path="/events" element={< Events />} />
