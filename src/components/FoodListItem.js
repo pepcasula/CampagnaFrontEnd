@@ -18,13 +18,13 @@ const FoodListItem = ({food, onFoodClick}) => {
     onFoodClick(food);
   }
 
-  return <li onClick={handleClick}>
+  return <ListItem onClick={handleClick}>
                                     <h4>{food.name}</h4>
                                     <p>{food.description}</p>
                                     Content per unit: {food.sizePerUnit}{}<br/>
                                     Price: {food.price}<br/>
                                     {food.farmer.name}
-         </li>
+         </ListItem>
 }
 
 export default FoodListItem;
