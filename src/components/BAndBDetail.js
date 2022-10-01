@@ -1,14 +1,22 @@
 import React from 'react';
-import CampagnaContainer from '../containers/CampagnaContainer';
+import BookingForm from './BookingForm';
+import bookingService from './../services/BookingServices';
+
 
 const BAndBDetail = ({selectedBAndB}) => {
+
+  const createBooking = (newBooking) => {
+    console.log(newBooking);
+    bookingService.postBooking(newBooking)
+  }
+  const bandbId = selectedBAndB.id
+
   return (
       
       <div>
           <h3>{selectedBAndB.name}</h3>
           <p>{selectedBAndB.email}</p>
-          <p>{selectedBAndB.phoneNumber}</p>
-          <p>I dare you to book....</p>
+          <BookingForm createBooking={createBooking} bandbId={bandbId}/>
       </div>
   )
 }

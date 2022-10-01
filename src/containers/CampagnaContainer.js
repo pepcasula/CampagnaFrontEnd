@@ -7,6 +7,9 @@ import BAndBList from '../components/BAndBList';
 import Events from '../components/Events';
 import FoodDetail from '../components/FoodDetail';
 import BAndBDetail from '../components/BAndBDetail';
+import FoodSelector from '../components/FoodSelect';
+import BAndBSelector from '../components/BAndBSelect';
+
 import './CampagnaContainer.css';
 
 const CampagnaContainer = () => {

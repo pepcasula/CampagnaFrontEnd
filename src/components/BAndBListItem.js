@@ -15,6 +15,8 @@ const ListItem = styled.li`
 
 const BAndBListItem = ({bAndB, onBAndBClick}) => {
 
+
+
   const handleClick = function(){
     onBAndBClick(bAndB);
   }
