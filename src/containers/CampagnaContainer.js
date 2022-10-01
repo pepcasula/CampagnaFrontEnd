@@ -8,6 +8,9 @@ import Events from '../components/Events';
 import FoodDetail from '../components/FoodDetail';
 import BAndBDetail from '../components/BAndBDetail';
 import './CampagnaContainer.css';
+import styled from "styled-components";
+
+
 
 const CampagnaContainer = () => {
     const [foods, setFoods] = useState([]);
@@ -45,7 +48,6 @@ const CampagnaContainer = () => {
 
     return (
         <div className="main-container">
-
           <Router>
             <NavBar />
               <Routes>
@@ -55,9 +57,10 @@ const CampagnaContainer = () => {
                 <Route path="/events" element={< Events />} />
               </Routes>
           </Router>
-
         </div>
     )
 }
+
+
 
 export default CampagnaContainer;
