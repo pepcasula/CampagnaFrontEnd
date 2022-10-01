@@ -7,6 +7,9 @@ import BAndBList from '../components/BAndBList';
 import Events from '../components/Events';
 import FoodDetail from '../components/FoodDetail';
 import BAndBDetail from '../components/BAndBDetail';
+import FoodSelector from '../components/FoodSelect';
+import BAndBSelector from '../components/BAndBSelect';
+
 import './CampagnaContainer.css';
 import styled from "styled-components";
 
@@ -54,6 +57,7 @@ const CampagnaContainer = () => {
                 <Route path="/" element={< Home />} />
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} />} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
+                <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
                 <Route path="/events" element={< Events />} />
               </Routes>
           </Router>

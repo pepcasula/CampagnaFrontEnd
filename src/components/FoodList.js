@@ -10,7 +10,7 @@ const FoodList = ({foods, onFoodClick}) => {
 
   return (
     <div className='sub-routes'>
-    Nothing Here
+    Our foods:
     <ul>
       {foodsItems}
     </ul>
