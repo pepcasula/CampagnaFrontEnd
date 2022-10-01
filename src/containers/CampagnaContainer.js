@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from '../components/Home';
+import NavBar from '../components/NavBar';
 import FoodList from '../components/FoodList';
 import BAndBList from '../components/BAndBList';
+import Events from '../components/Events';
 import FoodDetail from '../components/FoodDetail';
 import BAndBDetail from '../components/BAndBDetail';
 import FoodSelector from '../components/FoodSelect';
@@ -42,24 +46,19 @@ const CampagnaContainer = () => {
       setSelectedBAndB(bAndB);
   }
 
-    const onFoodSelected = function(food){
-      setSelectedFood(food);
-  }
-
-    const onBAndBSelected = function(bAndB){
-      setSelectedBAndB(bAndB);
-  }
-
     return (
         <div className="main-container">
 
-            <FoodList foods={foods} onFoodClick={onFoodClick} />
-            <FoodSelector foods={foods} onFoodSelected={onFoodSelected} />
-            {selectedFood ? <FoodDetail selectedFood={selectedFood} /> : null}
-
-            <BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />
-            <BAndBSelector bAndBs={bAndBs} onBAndBSelected={onBAndBSelected} />
-            {selectedBAndB ? <BAndBDetail selectedBAndB={selectedBAndB}/> : null}
+          <Router>
+            <NavBar />
+              <Routes>
+                <Route path="/" element={< Home />} />
+                <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} />} />
+                <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
+                <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
+                <Route path="/events" element={< Events />} />
+              </Routes>
+          </Router>
 
         </div>
     )
