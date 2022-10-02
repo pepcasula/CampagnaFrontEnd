@@ -1,5 +1,12 @@
 import React from 'react';
+import styled from "styled-components";
 import FoodListItem from './FoodListItem';
+
+const UList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+`
 
 const FoodList = ({foods, onFoodClick, onBasketAdd, basket}) => {
 
@@ -10,10 +17,10 @@ const FoodList = ({foods, onFoodClick, onBasketAdd, basket}) => {
 
   return (
     <div className='sub-routes'>
-    Our foods:
-    <ul>
+    <br/>FOODS BANNER HERE
+    <UList>
       {foodsItems}
-    </ul>
+    </UList>
   </div>
   )
 }

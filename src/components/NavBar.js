@@ -7,6 +7,9 @@ const BarItems = styled.ul`
     font-family: "Gill Sans", "Futura", "Source Sans Pro",sans-serif;
     font-size: 20px;
     color: white;
+    margin: 0px;
+    padding: 0px;
+    border-bottom: solid 7px rgba(255,255,255,.3);
   `
 
 const BarButton = styled.li`
