@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 const ListItem = styled.li`
   display: flex;
@@ -27,7 +26,8 @@ const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
     onBasketAdd(newBasket)
   }
 
-  return <ListItem onClick={handleClick}>
+  return (
+      <ListItem onClick={handleClick}>
             <div>
                   <h4>{food.name}</h4>
                   <p>{food.description}</p>
@@ -38,8 +38,10 @@ const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
             </div>
             <div>
                   <img src="../../logo192.png"/>
+                  {/* <img src={food.imgUrl}/> */}
             </div>
       </ListItem>
+  )
 }
 
 export default FoodListItem;

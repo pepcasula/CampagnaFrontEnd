@@ -1,5 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import BAndBListItem from './BAndBListItem';
+
+const UList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+`
 
 const BAndBList = ({bAndBs, onBAndBClick}) => {
 
@@ -9,9 +16,9 @@ const BAndBList = ({bAndBs, onBAndBClick}) => {
 
   return (
     <div className='sub-routes'>
-    <ul>
+    <UList>
       {bAndBsItems}
-    </ul>
+    </UList>
   </div>
   )
 }
