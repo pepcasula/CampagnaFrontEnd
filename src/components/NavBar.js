@@ -1,24 +1,44 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import styled from 'styled-components';
+
+const BarItems = styled.ul`
+    background-color: rgb(0, 102, 34);
+    font-family: "Gill Sans", "Futura", "Source Sans Pro",sans-serif;
+    font-size: 20px;
+    color: white;
+  `
+
+const BarButton = styled.li`
+    padding: 6px 0px 6px 0px;
+    border-right: solid 1px rgba(255,255,255,.3);
+`
+
+const BarButtonLink = styled.a`
+    color: white;
+    text-decoration: none;
+    padding: 0px 20px 0px 10px;
+  `
 
 const NavBar = () => {
 
     return (
 
-        <ul>
-            <li>
-                <Link to ="/">Home</Link>
-            </li>
-            <li>
-                <Link to ="/products">Products</Link>
-            </li>
-            <li>
-                <Link to ="/accomodations">Accomodations</Link>
-            </li>
-            <li>
-                <Link to ="/events">Events</Link>
-            </li>
-        </ul>
+        <BarItems>
+            <BarButton></BarButton>     {/* inactive button, used for styling left margin of second button */}
+            <BarButton>
+                <BarButtonLink href="/">Home</BarButtonLink>
+            </BarButton>
+            <BarButton>
+                <BarButtonLink href="/products">Products</BarButtonLink>
+            </BarButton>
+            <BarButton>
+                <BarButtonLink href="/accomodations">Accomodations</BarButtonLink>
+            </BarButton>
+            <BarButton>
+                <BarButtonLink href="/events">Events</BarButtonLink>
+            </BarButton>
+        </BarItems>
     );
 }
 
