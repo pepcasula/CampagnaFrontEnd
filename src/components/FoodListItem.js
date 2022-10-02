@@ -11,7 +11,7 @@ const ListItem = styled.li`
   color: rgb(0, 77, 26);
   margin: 2em;
   padding: 1em;
-  border-radius: 0.6em;
+  border-radius: 0.4em;
   border: 1px black;
 `
 

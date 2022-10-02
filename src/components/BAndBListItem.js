@@ -13,7 +13,7 @@ const ListItem = styled.li`
   color: rgb(0, 49, 102);
   margin: 2em;
   padding: 0.8em;
-  border-radius: 0.6em;
+  border-radius: 0.4em;
   border: 1px black;
   color: navy;
   text-decoration: none;
@@ -35,14 +35,6 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
 
   return (
 
-    // <ListItem onClick={handleClick}>
-    //                             <Link to="/accomodations/detail" style={{textDecoration: null}}><h4>{bAndB.name}</h4></Link>
-    //                             Email: {bAndB.email}<br/>
-    //                             Phone number: {/*{bAndB.phoneNumber}*/}
-    // </ListItem>
-
-
-
       <ListItem onClick={handleClick}>
         <div>
           <Link to="/accomodations/detail" style={{textDecoration: 'none', color: 'rgb(0, 49, 102)'}}><h4>{bAndB.name}</h4></Link>
@@ -54,8 +46,8 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
         <div>
           <Link to="/accomodations/detail">
             <img height="220px" src="../../images/creepy2.webp"/>
+            {/* <img src={bAndB.imgurl}/> */}
           </Link>
-           {/* <img src={bAndB.imgUrl}/> */}
         </div>
       </ListItem>
   )
