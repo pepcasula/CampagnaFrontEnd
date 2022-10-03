@@ -37,7 +37,7 @@ const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
                   <button onClick={addToBasket} value={food.name}>+</button><br/>
             </div>
             <div>
-                  <img width="250px" src={`/images/${food.imageUrl}`}/>
+                  <img width="230px" src={`/images/${food.imageUrl}`}/>
             </div>
       </ListItem>
   )
