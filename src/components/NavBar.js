@@ -30,16 +30,16 @@ const NavBar = () => {
         <BarItems>
             <BarButton></BarButton>     {/* inactive button, used for styling left margin of second button */}
             <BarButton>
-                <BarButtonLink href="/">Home</BarButtonLink>
+                <Link to="/" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Home</Link>
             </BarButton>
             <BarButton>
-                <BarButtonLink href="/products">Products</BarButtonLink>
+                <Link to="/products" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Products</Link>
             </BarButton>
             <BarButton>
-                <BarButtonLink href="/accomodations">Accomodations</BarButtonLink>
+                <Link to="/accomodations" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Accomodations</Link>
             </BarButton>
             <BarButton>
-                <BarButtonLink href="/events">Events</BarButtonLink>
+                <Link to="/events" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Events</Link>
             </BarButton>            
         </BarItems>
     );

@@ -66,6 +66,7 @@ const CampagnaContainer = () => {
         <div className="main-container">
           <p>{showBasket}</p>
           <Router>
+            {/* <Header /> */}
             <NavBar />
               {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice}</p> : null}
               <Routes>
