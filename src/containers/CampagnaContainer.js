@@ -55,11 +55,12 @@ const CampagnaContainer = () => {
   }
 
   const showBasket = basket.map((element, index) => {
-    console.log(element);
+    
   })
 
     return (
         <div className="main-container">
+          {basket.length ? <p className='basket'>your basket has : {basket.length} items</p> : null}
           <p>{showBasket}</p>
           <Router>
             <NavBar />

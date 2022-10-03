@@ -25,3 +25,10 @@ li {
   margin-left: 0px;
   margin-top: 0px;
 }
+
+.basket {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+}
