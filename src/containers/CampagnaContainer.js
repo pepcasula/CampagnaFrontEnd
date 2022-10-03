@@ -58,9 +58,13 @@ const CampagnaContainer = () => {
     
   })
 
+  const basketTotalPrice = basket.reduce(
+    (now, next) => now + next.price, 0
+  )
+
     return (
         <div className="main-container">
-          {basket.length ? <p className='basket'>your basket has : {basket.length} items</p> : null}
+          {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice}</p> : null}
           <p>{showBasket}</p>
           <Router>
             <NavBar />
