@@ -3,13 +3,13 @@ import styled from 'styled-components';
 
 const UList = styled.ul`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 width: 70%;
 `
 
 const ListItem = styled.li`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 
   background-color: pink;
@@ -25,17 +25,15 @@ const Events = ({events}) => {
 
 
   const unpackEvents = events.map((event, index) => {
-    return <ListItem event={event} key={index}>{event.eventName}<br></br>{event.eventDescription}<br></br>From {event.startDate} to {event.endDate}</ListItem>
+    return <ListItem event={event} key={index}><h4>{event.eventName}</h4><p>{event.eventDescription}<br></br>From {event.startDate} to {event.endDate}</p></ListItem>
   })
-
-  console.log(events);
 
 
   return (
   <>
   <div className='sub-routes'>
     <h4>Events</h4>
-    <UList>
+    <UList id="events">
       {unpackEvents}
     </UList>
   </div>

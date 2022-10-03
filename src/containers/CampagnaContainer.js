@@ -9,6 +9,7 @@ import FoodDetail from '../components/FoodDetail';
 import BAndBDetail from '../components/BAndBDetail';
 import FoodSelector from '../components/FoodSelect';
 import BAndBSelector from '../components/BAndBSelect';
+import Trips from '../components/Trips';
 
 import './CampagnaContainer.css';
 import styled from "styled-components";
@@ -91,7 +92,7 @@ const CampagnaContainer = () => {
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}/>} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
                 <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
-                <Route path="/events" element={<Events events={events}/>} />
+                <Route path="/trips" element={<Trips trips={trips}/>} />
               </Routes>
               <Events events={events}/>
           </Router>
