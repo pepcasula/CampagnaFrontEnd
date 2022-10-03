@@ -40,7 +40,7 @@ const NavBar = () => {
             </BarButton>
             <BarButton>
                 <BarButtonLink href="/events">Events</BarButtonLink>
-            </BarButton>
+            </BarButton>            
         </BarItems>
     );
 }

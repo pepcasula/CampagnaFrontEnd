@@ -32,7 +32,6 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
     onBAndBClick(bAndB);
   }
 
-
   return (
 
       <ListItem onClick={handleClick}>
@@ -45,8 +44,7 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
         </div>
         <div>
           <Link to="/accomodations/detail">
-            <img height="220px" src="../../images/creepy2.webp"/>
-            {/* <img src={bAndB.imgurl}/> */}
+            <img width="250px" src={`/images/${bAndB.imageUrl}`} />
           </Link>
         </div>
       </ListItem>
