@@ -37,10 +37,7 @@ const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
                   <button onClick={addToBasket} value={food.name}>+</button><br/>
             </div>
             <div>
-                  {/* <img src="../../logo192.png"/> */}
-                  {/* <img src={require(${food.img_url})}/> */}
-
-                  <img src={food.img_url}/>
+                  <img width="250px" src={`/images/${food.imageUrl}`}/>
             </div>
       </ListItem>
   )

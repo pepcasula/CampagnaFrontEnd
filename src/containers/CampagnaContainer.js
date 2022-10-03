@@ -64,7 +64,7 @@ const CampagnaContainer = () => {
 
     return (
         <div className="main-container">
-          <p>{showBasket}</p>
+          {showBasket}
           <Router>
             {/* <Header /> */}
             <NavBar />
