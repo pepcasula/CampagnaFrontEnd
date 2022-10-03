@@ -9,6 +9,7 @@ import FoodDetail from '../components/FoodDetail';
 import BAndBDetail from '../components/BAndBDetail';
 import FoodSelector from '../components/FoodSelect';
 import BAndBSelector from '../components/BAndBSelect';
+import Trips from '../components/Trips';
 
 import './CampagnaContainer.css';
 import styled from "styled-components";
@@ -21,9 +22,13 @@ const CampagnaContainer = () => {
     const [bAndBs, setBAndBs] = useState([]);
     const [selectedBAndB, setSelectedBAndB] = useState(null);
     const [basket, setBasket] = useState([])
+    const [events, setEvents] = useState([])
+    const [trips, setTrips] = useState([])
 
     useEffect(() => {
       getFoods();
+      getEvents();
+      getTrips();
     }, [])
 
     useEffect(() => {
@@ -40,6 +45,18 @@ const CampagnaContainer = () => {
       fetch('http://localhost:8080/bandbs')
       .then(res => res.json())
       .then(bAndBs => setBAndBs(bAndBs))
+    }
+
+    const getEvents = function(){
+      fetch('http://localhost:8080/events')
+      .then(res => res.json())
+      .then(events => setEvents(events))
+    }
+
+    const getTrips = function(){
+      fetch('http://localhost:8080/trips')
+      .then(res => res.json())
+      .then(trips => setTrips(trips))
     }
 
     const onBasketAdd = function(newList){
@@ -62,6 +79,7 @@ const CampagnaContainer = () => {
     (now, next) => now + next.price, 0
   )
 
+
     return (
         <div className="main-container">
           {showBasket}
@@ -74,8 +92,9 @@ const CampagnaContainer = () => {
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}/>} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
                 <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
+                <Route path="/trips" element={<Trips trips={trips}/>} />
               </Routes>
-              <Events />
+              <Events events={events}/>
           </Router>
         </div>
     )

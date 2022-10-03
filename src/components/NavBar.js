@@ -39,7 +39,10 @@ const NavBar = () => {
                 <Link to="/accomodations" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Accomodations</Link>
             </BarButton>
             <BarButton>
-                <Link to="/events" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Events</Link>
+                <Link to="/trips" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Trips</Link>
+            </BarButton>            
+            <BarButton>
+                <a href="#events" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Events</a>
             </BarButton>            
         </BarItems>
     );
