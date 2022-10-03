@@ -55,14 +55,19 @@ const CampagnaContainer = () => {
   }
 
   const showBasket = basket.map((element, index) => {
-    console.log(element);
+    
   })
+
+  const basketTotalPrice = basket.reduce(
+    (now, next) => now + next.price, 0
+  )
 
     return (
         <div className="main-container">
           <p>{showBasket}</p>
           <Router>
             <NavBar />
+              {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice}</p> : null}
               <Routes>
                 <Route path="/" element={< Home />} />
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}/>} />
