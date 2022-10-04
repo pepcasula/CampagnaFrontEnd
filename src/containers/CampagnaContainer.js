@@ -86,13 +86,14 @@ const CampagnaContainer = () => {
           <Router>
             {/* <Header /> */}
             <NavBar />
-              {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice}</p> : null}
+              {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice} <button to='/basket'>Go to Chekcout</button></p> : null}
               <Routes>
                 <Route path="/" element={< Home />} />
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}/>} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
                 <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
                 <Route path="/trips" element={<Trips trips={trips}/>} />
+                <Route path="/basket" basket={basket}/>
               </Routes>
               <Events events={events}/>
           </Router>

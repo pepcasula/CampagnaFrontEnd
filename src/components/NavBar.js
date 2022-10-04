@@ -43,7 +43,7 @@ const NavBar = () => {
             </BarButton>            
             <BarButton>
                 <a href="#events" style={{textDecoration: 'none', color: 'white', padding: '0px 20px 0px 10px'}}>Events</a>
-            </BarButton>            
+            </BarButton>           
         </BarItems>
     );
 }
