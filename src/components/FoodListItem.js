@@ -34,7 +34,7 @@ const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
                   Content per unit: {food.sizePerUnit}{food.measurementUnit}<br/>
                   Price: {food.price}<br/>
                   {food.farmer.name}
-                  <button onClick={addToBasket} value={food.name}>+</button><br/>
+                  <button onClick={addToBasket} value={food.name} className='buy-button'>+</button><br/>
             </div>
             <div>
                   <img width="230px" src={`/images/${food.imageUrl}`}/>
