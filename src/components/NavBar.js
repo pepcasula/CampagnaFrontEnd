@@ -10,7 +10,7 @@ const BarItems = styled.ul`
     margin: 0px;
     padding: 0px;
     border-bottom: solid 7px rgba(255,255,255,.3);
-  `
+`
 
 const BarButton = styled.li`
     padding: 6px 0px 6px 0px;
@@ -21,7 +21,7 @@ const BarButtonLink = styled.a`
     color: white;
     text-decoration: none;
     padding: 0px 20px 0px 10px;
-  `
+`
 
 const NavBar = () => {
 

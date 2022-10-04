@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../components/Home';
 import NavBar from '../components/NavBar';
 import FoodList from '../components/FoodList';
@@ -71,22 +71,22 @@ const CampagnaContainer = () => {
       setSelectedBAndB(bAndB);
   }
 
-  const showBasket = basket.map((element, index) => {
-    
-  })
-
   const basketTotalPrice = basket.reduce(
     (now, next) => now + next.price, 0
   )
 
+  const goToCheckout = () => {
+    return <Link to="/basket" basket={basket}>Go to checkout</Link>
+  }
+
+
 
     return (
         <div className="main-container">
-          {showBasket}
           <Router>
             {/* <Header /> */}
             <NavBar />
-              {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice} <button to='/basket'>Go to Chekcout</button></p> : null}
+              {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice}<Link to="/basket" basket={basket}><button >Go to Checkout</button></Link></p> : null}
               <Routes>
                 <Route path="/" element={< Home />} />
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}/>} />
