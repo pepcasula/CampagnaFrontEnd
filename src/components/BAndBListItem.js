@@ -44,7 +44,7 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
         </div>
         <div>
           <Link to="/accomodations/detail">
-            <img width="250px" src={`/images/${bAndB.imageUrl}`} />
+            <img width="230px" src={`/images/${bAndB.imageUrl}`} />
           </Link>
         </div>
       </ListItem>
