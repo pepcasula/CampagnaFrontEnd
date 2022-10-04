@@ -16,6 +16,7 @@ const BAndBList = ({bAndBs, onBAndBClick}) => {
 
   return (
     <div className='sub-routes'>
+    <img width="100%" src="/images/accomodationsbanner2.png"/>
     <UList>
       {bAndBsItems}
     </UList>

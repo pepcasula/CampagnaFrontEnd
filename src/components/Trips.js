@@ -30,6 +30,7 @@ const Trips = ({trips}) => {
     })
 
     return (<>
+    <img width="100%" src="/images/tripsbanner.png"/>
     <UList>
         {unpackTrips}
     </UList>

@@ -18,7 +18,7 @@ const FoodList = ({foods, onFoodClick, onBasketAdd, basket}) => {
 
   return (
     <div className='sub-routes'>
-    <img width="100%" src="/images/productsbanner.png"/>
+    <img width="100%" src="/images/productsbanner3.png"/>
     <UList>
       {foodsItems}
     </UList>
