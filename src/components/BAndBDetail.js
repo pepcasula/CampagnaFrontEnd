@@ -20,9 +20,14 @@ const BookingDetail = styled.div`
   text-decoration: none;
   `
 
-const Details = styled.p`
+const Details = styled.div`
 color: rgb(0, 49, 102);
 text-decoration: none;
+`
+
+
+const Image = styled.img`
+margin-left: 10px;
 `
 
 const BAndBDetail = ({selectedBAndB}) => {
@@ -36,11 +41,15 @@ const BAndBDetail = ({selectedBAndB}) => {
   return (
       
       <BookingDetail>
-        <Details>
+        <Details> 
           <h3>{selectedBAndB.name}</h3>
           {selectedBAndB.email}
           <BookingForm createBooking={createBooking} bandbId={bandbId}/>
         </Details>       
+          <div>
+            <Image width="230px" src={`/images/${selectedBAndB.imageUrl2}`}/>
+            <Image width="230px" src={`/images/${selectedBAndB.imageUrl}`}/>
+          </div>
       </BookingDetail>
   )
 }
