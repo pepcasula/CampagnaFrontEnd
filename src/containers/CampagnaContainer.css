@@ -31,8 +31,17 @@ li {
     top: 8px;
     right: 16px;
     font-size: 18px;
+    color: rgb(0, 102, 34);
 }
 
 .buy-button {
   margin-left: 150px;
+}
+
+#checkout-button {
+  margin-left: 600px;
+}
+
+button {
+  color: rgb(0, 102, 34);
 }
