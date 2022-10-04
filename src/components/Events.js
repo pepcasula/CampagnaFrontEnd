@@ -32,7 +32,7 @@ const Events = ({events}) => {
   return (
   <>
   <div className='sub-routes' id="events">
-  <img width="100%" src="/images/eventsbanner2.png"/>
+  <img width="100%" src="/images/eventsbanner3.png"/>
     <UList>
       {unpackEvents}
     </UList>
