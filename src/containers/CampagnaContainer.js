@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from '../components/Home';
 import NavBar from '../components/NavBar';
 import FoodList from '../components/FoodList';
@@ -13,6 +13,7 @@ import Trips from '../components/Trips';
 
 import './CampagnaContainer.css';
 import styled from "styled-components";
+import Basket from '../components/Basket';
 
 
 
@@ -71,29 +72,23 @@ const CampagnaContainer = () => {
       setSelectedBAndB(bAndB);
   }
 
-  const showBasket = basket.map((element, index) => {
-    
-  })
-
   const basketTotalPrice = basket.reduce(
     (now, next) => now + next.price, 0
   )
 
-
     return (
         <div className="main-container">
-          {showBasket}
           <Router>
             {/* <Header /> */}
             <NavBar />
-              {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice} <button to='/basket'>Go to Chekcout</button></p> : null}
+              {basket.length ? <p className='basket'>your basket has : {basket.length}<br></br> items and total price is £{basketTotalPrice}<br></br><Link to="/basket" ><button >Go to Checkout</button></Link></p> : null}
               <Routes>
                 <Route path="/" element={< Home />} />
                 <Route path="/products" element={< FoodList foods={foods} onFoodClick={onFoodClick} onBasketAdd={onBasketAdd} basket={basket}/>} />
                 <Route path="/accomodations" element={< BAndBList bAndBs={bAndBs} onBAndBClick={onBAndBClick} />} />
                 <Route path="/accomodations/detail" element={< BAndBDetail selectedBAndB={selectedBAndB} />} />
                 <Route path="/trips" element={<Trips trips={trips}/>} />
-                <Route path="/basket" basket={basket}/>
+                <Route path="/basket" element={<Basket basket={basket}  />}/>
               </Routes>
               <Events events={events}/>
           </Router>
