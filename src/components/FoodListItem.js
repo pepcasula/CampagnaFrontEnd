@@ -33,7 +33,7 @@ const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
                   <p>{food.description}</p>
                   Content per unit: {food.sizePerUnit}{food.measurementUnit}<br/>
                   Price: {food.price}<br/>
-                  {food.farmer.name}
+                  Farmer: {food.farmer.name}
                   <button onClick={addToBasket} value={food.name} className='buy-button'>+</button><br/>
             </div>
             <div>
