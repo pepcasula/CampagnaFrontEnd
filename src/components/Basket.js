@@ -16,7 +16,7 @@ background-color: rgb(255, 250, 230);
 font-size: 1.25em;
 color: rgb(0, 77, 26);
 margin: 2em;
-padding: 1em;
+padding: .5em;
 border-radius: 0.4em;
 border: 1px black;
 `
@@ -39,7 +39,9 @@ const Basket = ({basket}) => {
         return (<ListItem item={item} key={index}>
             <div>
                 <h4>{item.name}</h4>
+                <p>
                 Quantity: {basketMapping[item.name]} 
+                </p>
             </div>
             <div>
                 <img width="230px" src={`/images/${item.imageUrl}`}/>
