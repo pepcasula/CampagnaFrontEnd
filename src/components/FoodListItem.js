@@ -32,9 +32,9 @@ const FoodListItem = ({food, onFoodClick, onBasketAdd, basket}) => {
                   <h4>{food.name}</h4>
                   <p>{food.description}</p>
                   Content per unit: {food.sizePerUnit}{food.measurementUnit}<br/>
-                  Price: {food.price}<br/>
+                  Price: £{food.price}.00<br/>
                   Farmer: {food.farmer.name}
-                  <button onClick={addToBasket} value={food.name} className='buy-button'>+</button><br/>
+                  <button onClick={addToBasket} value={food.name} className='buy-button'>Add to basket</button><br/>
             </div>
             <div>
                   <img width="230px" src={`/images/${food.imageUrl}`}/>
