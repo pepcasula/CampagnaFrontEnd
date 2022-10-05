@@ -12,7 +12,9 @@ const ListItem = styled.li`
   flex-direction: column;
   justify-content: space-between;
 
-  background-color: pink;
+  background-color: pink; 
+  width: 300px;
+  height: 260px;
   font-size: 1.25em;
   color: rgb(0, 77, 26);
   margin: 2em;
