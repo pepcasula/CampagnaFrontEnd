@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 const UList = styled.ul`
 display: flex;
+flex-wrap: wrap;
 flex-direction: row;
-width: 70%;
+/* width: 70%; */
+padding: 0px;
 `
 
 const ListItem = styled.li`
@@ -13,6 +15,7 @@ flex-direction: column;
 justify-content: space-between;
 
 background-color: rgb(255, 250, 230);
+width: 220px;
 font-size: 1.25em;
 color: rgb(0, 77, 26);
 margin: 2em;
@@ -44,7 +47,7 @@ const Basket = ({basket}) => {
                 </p>
             </div>
             <div>
-                <img width="230px" src={`/images/${item.imageUrl}`}/>
+                <img width="220px" src={`/images/${item.imageUrl}`}/>
             </div> </ListItem>)
     })
 
