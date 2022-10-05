@@ -1,6 +1,7 @@
 
 import styled from 'styled-components';
 
+
 const UList = styled.ul`
 display: flex;
 flex-wrap: wrap;
@@ -54,7 +55,7 @@ const Basket = ({basket}) => {
 
 return(<>
     <div className='sub-routes'>
-        <h4>Items</h4>
+        <img width="27%" src="/images/basketlogo4.png"></img>
         <UList id='basket'>
             {basketUnpacking}
         </UList>
