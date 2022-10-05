@@ -36,14 +36,14 @@ const BAndBListItem = ({bAndB, onBAndBClick}) => {
 
       <ListItem onClick={handleClick}>
         <div>
-          <Link to="/accomodations/detail" style={{textDecoration: 'none', color: 'rgb(0, 49, 102)'}}><h4>{bAndB.name}</h4></Link>
+          <Link to="/accomodations/detail#top" style={{textDecoration: 'none', color: 'rgb(0, 49, 102)'}}><h4>{bAndB.name}</h4></Link>
           <Details>
             Email: {bAndB.email}<br/>
             Phone number: {/*{bAndB.phoneNumber}*/}
           </Details>
         </div>
         <div>
-          <Link to="/accomodations/detail" href="#top">
+          <Link to="/accomodations/detail#top">
             <img width="230px" src={`/images/${bAndB.imageUrl}`} />
           </Link>
         </div>
